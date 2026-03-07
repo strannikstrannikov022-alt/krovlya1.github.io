@@ -1,18 +1,116 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ремонт кровли в СПб | Кровельные работы и ремонт домов</title>
-  <meta name="description" content="Ремонт кровли в Санкт-Петербурге и Ленобласти. Замена крыши, устранение протечек, монтаж, ремонт дачных домов, хозяйственных построек и фундаментов. Звоните: +7 911 631-77-77." />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ремонт кровли в СПб — частный мастер</title>
+  <meta name="description" content="Ремонт кровли в Санкт-Петербурге и Ленобласти. Частичный и капитальный ремонт крыши, замена покрытия, устранение протечек, выезд и консультация.">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Иконки -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    .hero-actions,
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn i {
+      margin-right: 8px;
+    }
+
+    .btn-whatsapp {
+      background: #25D366 !important;
+      color: #fff !important;
+      border: 1px solid #25D366 !important;
+    }
+
+    .btn-whatsapp:hover {
+      opacity: 0.92;
+    }
+
+    .btn-telegram {
+      background: #229ED9 !important;
+      color: #fff !important;
+      border: 1px solid #229ED9 !important;
+    }
+
+    .btn-telegram:hover {
+      opacity: 0.92;
+    }
+
+    .site-footer a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .site-footer a i {
+      width: 18px;
+      text-align: center;
+    }
+
+    .feedback {
+      padding-top: 20px;
+    }
+
+    .feedback-container {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .feedback-form {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    .feedback-form input:focus,
+    .feedback-form textarea:focus {
+      border-color: #0f172a;
+    }
+
+    .feedback-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .feedback-form button {
+      align-self: center;
+      padding: 12px 24px;
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a class="logo" href="index.html">Ремонт кровли СПб</a>
-      <nav>
-        <a href="index.html">Главная</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">Ремонт кровли</a>
+      <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+      <nav class="site-nav">
+        <a href="index.html" class="active">Главная</a>
         <a href="services.html">Услуги</a>
         <a href="portfolio.html">Портфолио</a>
         <a href="contacts.html">Контакты</a>
@@ -24,67 +122,100 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="badge">Санкт-Петербург и Ленобласть</p>
-          <h1>Ремонт кровли и ремонт домов под ключ</h1>
-          <p class="lead">Выполняем кровельные и общестроительные работы: устранение протечек, замена кровли, ремонт дач, пристроек, бань, гаражей и хозяйственных построек.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="tel:+79116317777">Позвонить</a>
-            <a class="btn" href="https://wa.me/79116317777" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="btn" href="tg://resolve?phone=79116317777">Telegram</a>
+          <p class="eyebrow">Ремонт кровли в Санкт-Петербурге</p>
+          <h1>Надежный ремонт крыш частных домов под ключ</h1>
+          <p class="hero-text">
+            Устраняем протечки, меняем покрытие, усиливаем стропильную систему,
+            выполняем ремонт мягкой и скатной кровли. Работаем по СПб и Ленобласти.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+79116317777">
+              <i class="fa-solid fa-phone"></i>
+              Позвонить
+            </a>
+
+            <a class="btn btn-whatsapp" href="https://wa.me/79116317777" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i>
+              WhatsApp
+            </a>
+
+            <a class="btn btn-telegram" href="https://t.me/+79116317777" target="_blank" rel="noopener">
+              <i class="fa-brands fa-telegram"></i>
+              Telegram
+            </a>
           </div>
-          <div class="hero-points">
-            <span>Бесплатная консультация</span>
-            <span>Выезд по СПб и области</span>
-            <span>Работаем круглый год</span>
-          </div>
-        </div>
-        <div class="hero-card">
-          <h2>Принимаем заказы на:</h2>
-          <ul>
-            <li>ремонт кровли</li>
-            <li>полную замену крыши</li>
-            <li>ремонт стропильной системы</li>
-            <li>ремонт дачных домов</li>
-            <li>ремонт фундаментов и полов</li>
-            <li>строительство заборов и пристроек</li>
+
+          <ul class="hero-badges">
+            <li>Выезд и консультация</li>
+            <li>Частный мастер</li>
+            <li>Без посредников</li>
           </ul>
+        </div>
+
+        <div class="hero-card">
+          <img src="assets/hero-source.jpg" alt="Реклама услуг по ремонту кровли">
+          <div class="hero-card-content">
+            <strong>Контакт для связи</strong>
+            <p>+7 911 631-77-77</p>
+            <p>Санкт-Петербург и Ленинградская область</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2>Почему выбирают нас</h2>
-        <div class="cards three">
+        <div class="section-heading">
+          <p class="eyebrow">Чем занимаемся</p>
+          <h2>Основные направления работ</h2>
+        </div>
+
+        <div class="cards three-col">
           <article class="card">
-            <h3>Опыт в частном ремонте</h3>
-            <p>Работаем с частными домами, дачами, банями, гаражами и хозпостройками. Подбираем решение под состояние объекта и бюджет.</p>
+            <h3>Ремонт кровли</h3>
+            <p>Локальный и капитальный ремонт, устранение протечек, замена листов, коньков, примыканий и водосточной системы.</p>
           </article>
+
           <article class="card">
-            <h3>Честная консультация</h3>
-            <p>Объясняем, что можно восстановить ремонтом, а где выгоднее сразу заменить кровлю или конструкцию полностью.</p>
+            <h3>Замена покрытия</h3>
+            <p>Монтаж металлочерепицы, профнастила, мягкой кровли и сопутствующих элементов с аккуратной подгонкой и герметизацией.</p>
           </article>
+
           <article class="card">
-            <h3>Удобная связь</h3>
-            <p>Можно сразу позвонить, написать в WhatsApp или открыть Telegram с телефона для быстрого обсуждения работ.</p>
+            <h3>Сопутствующие работы</h3>
+            <p>Фундамент, полы, заборы, хозпостройки, пристройки и мелкие строительные работы для частного дома.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-dark">
       <div class="container">
-        <h2>Основные направления</h2>
-        <div class="cards two">
-          <article class="card">
-            <h3>Кровельные работы</h3>
-            <p>Ремонт протечек, замена покрытия, усиление конструкции, монтаж новой крыши, подшивка свесов, частичная или полная реконструкция.</p>
-            <a class="text-link" href="services.html">Смотреть услуги</a>
+        <div class="section-heading">
+          <p class="eyebrow">Почему выбирают нас</p>
+          <h2>Понятный подход к работе</h2>
+        </div>
+
+        <div class="cards four-col">
+          <article class="card dark-card">
+            <strong>Быстрый выезд</strong>
+            <p>Оперативно приезжаем на осмотр по СПб и области.</p>
           </article>
-          <article class="card">
-            <h3>Ремонт и строительство</h3>
-            <p>Ремонт полов, фундаментные работы, пристройки, заборы, дачные дома, хозяйственные строения и другие частные объекты.</p>
-            <a class="text-link" href="portfolio.html">Смотреть примеры работ</a>
+
+          <article class="card dark-card">
+            <strong>Фото до/после</strong>
+            <p>Показываем реальные примеры выполненных объектов.</p>
+          </article>
+
+          <article class="card dark-card">
+            <strong>Понятная смета</strong>
+            <p>Согласовываем объем и стоимость до начала работ.</p>
+          </article>
+
+          <article class="card dark-card">
+            <strong>На связи в мессенджерах</strong>
+            <p>Удобное общение через звонок, WhatsApp и Telegram.</p>
           </article>
         </div>
       </div>
@@ -93,29 +224,82 @@
     <section class="section cta">
       <div class="container cta-box">
         <div>
-          <h2>Нужен ремонт кровли в СПб?</h2>
-          <p>Свяжитесь с нами удобным способом. Расскажите, что случилось с крышей или домом, и мы подскажем дальнейшие шаги.</p>
+          <p class="eyebrow">Нужен осмотр крыши?</p>
+          <h2>Оставьте быстрый запрос</h2>
+          <p>Позвоните или напишите в мессенджер — обсудим задачу, сроки и материалы.</p>
         </div>
-        <div class="actions">
-          <a class="btn btn-primary" href="tel:+79116317777">+7 911 631-77-77</a>
-          <a class="btn" href="contacts.html">Контакты</a>
+
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="tel:+79116317777">
+            <i class="fa-solid fa-phone"></i>
+            +7 911 631-77-77
+          </a>
+
+          <a class="btn btn-whatsapp" href="https://wa.me/79116317777" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp
+          </a>
+
+          <a class="btn btn-telegram" href="https://t.me/+79116317777" target="_blank" rel="noopener">
+            <i class="fa-brands fa-telegram"></i>
+            Telegram
+          </a>
         </div>
+      </div>
+    </section>
+
+    <section class="section feedback">
+      <div class="container feedback-container">
+        <div class="feedback-title">
+          <p class="eyebrow">Обратная связь</p>
+          <h2>Свяжитесь с нами</h2>
+          <p>Оставьте сообщение и мы перезвоним вам.</p>
+        </div>
+
+        <form class="feedback-form">
+          <input type="text" placeholder="Ваше имя" required>
+          <input type="tel" placeholder="Телефон" required>
+          <textarea placeholder="Сообщение"></textarea>
+          <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <strong>Ремонт кровли СПб</strong>
-        <p>Кровельные и строительные работы для частных домов, дач и хозяйственных построек.</p>
+        <a href="index.html" class="logo">Ремонт кровли</a>
+        <p>Ремонт кровли, замена покрытия и строительные работы по частным домам.</p>
       </div>
+
       <div>
-        <a href="tel:+79116317777">+7 911 631-77-77</a><br />
-        <a href="https://wa.me/79116317777" target="_blank" rel="noopener">WhatsApp</a><br />
-        <a href="tg://resolve?phone=79116317777">Telegram</a>
+        <h3>Навигация</h3>
+        <a href="services.html">Услуги</a>
+        <a href="portfolio.html">Портфолио</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+
+      <div>
+        <h3>Связь</h3>
+        <a href="tel:+79116317777">
+          <i class="fa-solid fa-phone"></i>
+          +7 911 631-77-77
+        </a>
+
+        <a href="https://wa.me/79116317777" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          WhatsApp
+        </a>
+
+        <a href="https://t.me/+79116317777" target="_blank" rel="noopener">
+          <i class="fa-brands fa-telegram"></i>
+          Telegram
+        </a>
       </div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
