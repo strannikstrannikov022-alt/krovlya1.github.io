@@ -4,8 +4,8 @@ if (toggle && nav) {
   toggle.addEventListener('click', () => nav.classList.toggle('open'));
 }
 
-const feedbackForm = document.getElementById('feedback-form');
-if (feedbackForm) {
+const feedbackForms = document.querySelectorAll('.feedback-form');
+feedbackForms.forEach((feedbackForm) => {
   feedbackForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const [nameInput, phoneInput, messageInput] = feedbackForm.querySelectorAll('input, textarea');
@@ -21,4 +21,4 @@ if (feedbackForm) {
 
     window.open(`https://wa.me/79829020802?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
   });
-}
+});
