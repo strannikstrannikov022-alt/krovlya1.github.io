@@ -5,7 +5,7 @@ if (toggle && nav) {
 }
 
 const feedbackForms = document.querySelectorAll('.feedback-form');
-feedbackForms.forEach((feedbackForm) => {
+for (const feedbackForm of feedbackForms) {
   feedbackForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const [nameInput, phoneInput, messageInput] = feedbackForm.querySelectorAll('input, textarea');
@@ -19,6 +19,6 @@ feedbackForms.forEach((feedbackForm) => {
       message ? `Сообщение: ${message}` : ''
     ].filter(Boolean).join('\n');
 
-    window.open(`https://wa.me/79829020802?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    window.location.href = `https://wa.me/79829020802?text=${encodeURIComponent(text)}`;
   });
-});
+}
