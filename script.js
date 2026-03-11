@@ -19,6 +19,6 @@ if (feedbackForm) {
       message ? `Сообщение: ${message}` : ''
     ].filter(Boolean).join('\n');
 
-    window.open(`https://wa.me/79116317777?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    window.open(`https://wa.me/79829020802?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
   });
 }
